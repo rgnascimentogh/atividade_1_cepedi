@@ -6,7 +6,7 @@ float potencia(){
     system("chcp 65001>null");
     int uni;
     float watts, kwatts, cv, pot;
-    char str[4] = {' ','Watts', 'kWatts', 'cv'};
+    char str[] = {' ','Watts', 'kWatts', 'cv', '\0'};
     printf("\nEscolha a unidade de entrada: ");
     printf("\n1-Watts\n2-kWatts\n3-Cavalo-vapor(cv)\n");
     scanf("%f",&uni);
@@ -28,7 +28,7 @@ float potencia(){
         printf("\n%.2f cv",cv);
         break;
     
-    case 3://define kWatts em Watts e CV.
+    case 3://define cv em Watts e kWatts.
         watts = pot*735.5;
         kwatts = watts/1000;
         printf("\n%.2f Watts",watts);
