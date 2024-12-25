@@ -2,15 +2,14 @@
 #include<stdlib.h>
 #include<string.h>
 
-float potencia(){
+float potencia(void){
     system("chcp 65001>null");
     int uni;
     float watts, kwatts, cv, pot;
-    char str[] = {' ','Watts', 'kWatts', 'cv', '\0'};
     printf("\nEscolha a unidade de entrada: ");
     printf("\n1-Watts\n2-kWatts\n3-Cavalo-vapor(cv)\n");
-    scanf("%f",&uni);
-    printf("\nDigite a quantidade de %s: ",str[uni]);
+    scanf("%d",&uni);
+    printf("\nDigite a quantidade: ");
     scanf("%f",&pot);
     switch (uni)
     {
@@ -38,4 +37,12 @@ float potencia(){
     default:
         break;
     }
+}
+
+void main(void){
+
+    potencia();
+
+
+    return 0;
 }
